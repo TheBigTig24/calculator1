@@ -2,47 +2,40 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <script src="script.js"></script>
     </head>
     <body>
-        <h1>CALCARTOR</h1>
+        <h1>CALCULATOR</h1>
         <div class="mainFrame">
-            <div class="buttonHolder">
-                <div class="display">
-                    
-                </div>
-                <table class="opButtons">
-                    <tr>
-                        <td><button>ON</button></td>
-                        <td><button>CLEAR</button></td>
-                        <td><button>DEL</button></td>
-                        <td><button>/</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>7</button></td>
-                        <td><button>8</button></td>
-                        <td><button>9</button></td>
-                        <td><button>*</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>4</button></td>
-                        <td><button>5</button></td>
-                        <td><button>6</button></td>
-                        <td><button>-</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>1</button></td>
-                        <td><button>2</button></td>
-                        <td><button>3</button></td>
-                        <td><button>+</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>0</button></td>
-                        <td><button>.</button></td>
-                        <td><button>(-)</button></td>
-                        <td><button>=</button></td>
-                    </tr>
-                </table>
-            </div>
+            <table class="opButtons">
+                <tr>
+                    <td colspan="4"><input type="text" id="result"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="dis('7')" value="7"></td>
+                    <td><input type="button" onclick="dis('8')" value="8"></td>
+                    <td><input type="button" onclick="dis('9')" value="9"></td>
+                    <td><input type="button" onclick="operator('/')" value="/"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="dis('4')" value="4"></td>
+                    <td><input type="button" onclick="dis('5')" value="5"></td>
+                    <td><input type="button" onclick="dis('6')" value="6"></td>
+                    <td><input type="button" onclick="operator('*')" value="*"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="dis('1')" value="1"></td>
+                    <td><input type="button" onclick="dis('2')" value="2"></td>
+                    <td><input type="button" onclick="dis('3')" value="3"></td>
+                    <td><input type="button" onclick="operator('-')" value="-"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="dis('c')" value="c"></td>
+                    <td><input type="button" onclick="dis('0')" value="0"></td>
+                    <td><input type="button" onclick="equals('=')" value="="></td>
+                    <td><input type="button" onclick="operator('+')" value="+"></td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
