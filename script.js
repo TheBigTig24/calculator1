@@ -1,49 +1,55 @@
-let num1 = 0;
-let num2 = 0;
+let num1 = 'b';
+let num2 = 'z';
 let op = "";
 
 function dis(val) {
-    justDid();
-    if (val != 'c') {
+    if (num1 != 'b' && val != 'c' && op == "") {
+        num1 = 'b';
+        document.getElementById("result").value = "";
+        document.getElementById("result").value += val;
+    } else if (val != 'c') {
         document.getElementById("result").value += val;
     } else {
         document.getElementById("result").value = "";
+        num = 'b';
     }
 }
 
 function operator(val) {
-    num1 = document.getElementById("result").value;
-    op = val;
-    document.getElementById("result").value = "";
-}
-
-function justDid() {
-    if (num2 != 0) {
-        document.getElementById("result").value = "";
-        num1 = 0;
-        num2 = 0;
-        op = "";
+    if (num1 == 'b') {
+        num1 = document.getElementById("result").value;
     }
+    op = val;
+    document.getElementById("result").value += val;
 }
 
 function equals(val) {
     num2 = document.getElementById("result").value;
+    const redoNum2 = num2.substring(num2.indexOf(op) + 1, num2.length);
 
     const new1 = parseInt(num1);
-    const new2 = parseInt(num2);
+    const new2 = parseInt(redoNum2);
    
     if (op == '+') {
         const answer = new1 + new2;
         document.getElementById("result").value = answer;
+        num1 = answer;
+        op = "";
     } else if (op == '-') {
         const answer = new1 - new2;
         document.getElementById("result").value = answer;
+        num1 = answer;
+        op = "";
     } else if (op == '*') {
         const answer = new1 * new2;
         document.getElementById("result").value = answer;
+        num1 = answer;
+        op = "";
     } else if (op == '/') {
         const answer = new1 / new2;
         document.getElementById("result").value = answer;
+        num1 = answer;
+        op = "";
     }
 }
 
