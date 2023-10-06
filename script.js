@@ -11,7 +11,7 @@ function dis(val) {
         document.getElementById("result").value += val;
     } else {
         document.getElementById("result").value = "";
-        num1 = 'b';
+        num = 'b';
     }
 }
 
